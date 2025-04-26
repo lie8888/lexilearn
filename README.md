@@ -1,4 +1,7 @@
-# flutter_application_1
+# Lexilearn(在线背单词软件v1)
+使用Flutter实现了基本的显示单词和收藏单词的功能
+![image](https://github.com/user-attachments/assets/f9006276-8c39-4cba-a43d-5941831115a8)
+
 
 A new Flutter project.
 
