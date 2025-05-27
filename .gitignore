@@ -1,45 +1,26 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
+# ——————————————
+# 1. 忽略根下所有
+/*
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
+# 2. 放行自身和根文件
+!/.gitignore
+!/app-release.apk
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# ——————————————
+# 3. 放行 frontend 目录本身
+!/frontend/
+#    然后在 frontend 里，只保留 lib/** 和 pubspec.yaml
+/frontend/*
+!/frontend/lib/
+!/frontend/lib/**
+!/frontend/pubspec.yaml
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-
-# Symbolication related
-app.*.symbols
-
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# ——————————————
+# 4. 放行 backend 目录本身
+!/backend/
+#    然后在 backend 里，只保留 src/** 和 public/**
+/backend/*
+!/backend/src/
+!/backend/src/**
+!/backend/public/
+!/backend/public/**

@@ -1,0 +1,47 @@
+name: lexilearn
+description: A vocabulary learning app.
+publish_to: 'none' # Remove this line if you intend to publish the package.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Ensure Dart 3+ for Material 3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0 # Check for latest version
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.15
+  flutter_secure_storage: ^9.0.0 # For JWT token
+  provider: ^6.0.5 # State management
+  audioplayers: ^5.2.1 # For pronunciation - check latest
+  # For StatsPage (choose one or implement later)
+  fl_chart: ^0.66.0 # Powerful charting library
+  # charts_flutter: # Google's charting library (might be less actively maintained for M3)
+  intl: ^0.19.0 # 或者最新稳定版
+
+  
+# --- 在这里添加 flutter_launcher_icons 的配置 ---
+flutter_launcher_icons:
+  android: true       # 为 Android 生成图标 (也可以是 "launcher_icon")
+  ios: true           # 为 iOS 生成图标
+  image_path: "assets/icon/app_icon.png" # <-- 指向你放置图标源文件的路径
+  min_sdk_android: 21 # 可选: 安卓最低 SDK 版本 (影响是否生成 adaptive icons)
+  #=================================================
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  hive_generator: ^2.0.0
+  build_runner: ^2.4.6
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - assets/images/ # If you have any images
